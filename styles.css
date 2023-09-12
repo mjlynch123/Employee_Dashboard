@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --color-primary: #6c9bcf;
+  --color-danger: #ff0060;
+  --color-success: #1b9c85;
+  --color-warning: #f7d060;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+
+  --font-family: "Poppins", sans-serif;
+  --acitve-color: rgba(108, 155, 207, 0.5);
+
+  --card-border-radius: 1rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 0rem 3rem var(--color-light);
+}
+
+body {
+  width: 100vw;
+  background-color: var(--color-background);
+  margin: 0;
+}
+
+.logo {
+  margin-left: 20px;
+  font-family: var(--font-family);
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 100%;
+}
+
+nav {
+  width: 300px;
+  height: 100vh;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--card-border-radius);
+  transition: all 1s ease;
+  font-family: var(--font-family);
+  position: fixed;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  padding: 1rem;
+  font-size: 20px;
+  transition: var(--acitve-color) 0.3s ease; /* Transition background color */
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  background-color: var(--acitve-color);
+  color: var(--color-white); /* Change text color */
+  transition: --acitve-color 0.3s ease, color 0.3s ease; /* Transition both background color and text color */
+}
+
+nav ul li a {
+  color: var(--color-dark);
+  text-align: left;
+  text-decoration: none;
+}
+
+.active {
+  background-color: var(--acitve-color);
+  position: relative;
+}
+
+.active::before {
+  content: "";
+  border: 4px solid var(--color-primary);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50%;
+}
+
+nav ul li i {
+  margin-right: 10px;
+  width: 25px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.ticket-link {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ticket-number {
+  padding: 5px 7px;
+  border-radius: 50%;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.new-account {
+  width: 220px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.container,
+.main-container {
+  width: calc(100% - -10px);
+}
+
+.main-container {
+  width: 100%;
+  margin-left: 300px;
+}
+
+/*================================ Analyses card ================================*/
+
+.card-body {
+  margin: 0 15px;
+  margin-left: 5px;
+  font-family: var(--font-family);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  height: 50px;
+}
+
+.card-header h3 {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  color: var(--color-dark);
+}
+
+.card-header i {
+  color: var(--color-primary);
+  margin-right: 10px;
+  margin-top: 0px;
+  padding: 5px 12px;
+  border-radius: 50%;
+}
+
+.card-header i:hover {
+  cursor: pointer;
+  background-color: rgba(204, 204, 204, 0.4);
+}
+
+.analytics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.analytics-card {
+  height: 20rem;
+  width: calc(100% - 20px);
+  margin: 10px;
+  border-radius: var(--border-radius-1);
+  position: relative;
+  box-shadow: var(--box-shadow);
+}
+
+.analytics-text {
+  text-align: center;
+}
+
+.analytics-text h4 {
+  font-size: 20px;
+}
+
+.analytics-text p {
+  margin-top: -15px;
+  font-size: 20px;
+}
+
+.progress {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  left: 50%;
+  top: 75px;
+  transform: translate(-50%, -50%);
+}
+
+.outer {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  padding: 20px;
+}
+
+.inner {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15);
+}
+
+#number {
+  font-family: "Arial";
+  font-size: 20px;
+  color: #555;
+}
+
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim 2s linear forwards;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*================================ Users ================================*/
+
+.users {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: auto;
+  width: calc(100% - 65px);
+  margin-left: 15px;
+  margin-top: 10px;
+  padding: 15px;
+  box-shadow: var(--box-shadow);
+  font-family: var(--font-family);
+}
+
+.user {
+  width: calc(100% - 10px);
+}
+
+.image,
+.new-icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 5px auto;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name,
+.new {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.last-seen {
+  font-size: 15px;
+  color: var(--color-dark-variant);
+  margin-top: 5px;
+}
+
+.name,
+.last-seen {
+  text-align: center;
+}
+
+#new-user:hover {
+  cursor: pointer;
+}
+
+.new {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#third-user {
+  margin-left: 13px;
+}
+
+#new-user {
+  margin-left: 25px;
+}
+
+.new-icon {
+  position: relative;
+  border: 2px solid var(--color-light);
+}
+
+.new-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 55px;
+  color: var(--color-light);
+}
+
+/*================================ Orders ================================*/
+
+.orders {
+  height: auto;
+  min-height: 200px;
+  width: calc(100% - 30px);
+  margin-left: 15px;
+  margin: 15px;
+}
+
+/* CSS styles for status colors */
+.status-green {
+  color: green;
+}
+
+.status-red {
+  color: red;
+}
+
+.status-yellow {
+  color: yellow;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  font-family: var(--font-family);
+  border-spacing: 0 20px;
+  /* background-color: var(--color-white); */
+  border-radius: var(--border-radius-1);
+  box-shadow: var(--box-shadow);
+}
+
+tbody tr {
+  text-align: center;
+  border-bottom: 1px solid var(--color-light) !important;
+  margin-top: 10px;
+}
+
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 165.2;
+  }
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  color: black;
+  font-size: 24px; /* or your desired size */
+}
+
+@media screen and (max-width: 1800px) {
+  .analytics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .users {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 15px;
+    width: calc(100% - 60px);
+  }
+
+  #second-user {
+    margin-left: 20px;
+  }
+
+  #third-user {
+    margin-left: 0px;
+  }
+
+  #new-user {
+    margin-left: 20px;
+  }
+
+  #third-user,
+  #new-user {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .analytics {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .users {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .user {
+    margin-top: 50px;
+  }
+
+  #second-user {
+    margin-left: 0px;
+  }
+
+  #new-user {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-container {
+    margin: 0 auto;
+    margin-left: -7px;
+    width: 100%;
+  }
+
+  .analytics {
+    width: 100vw;
+    margin: 0 auto;
+  }
+
+  .card {
+    padding: 0;
+    margin: 0;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .users {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: calc(100% - 0px);
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  nav {
+    overflow-y: scroll;
+  }
+
+  .new-account {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .analytics {
+    margin-left: 80px !important;
+  }
+}

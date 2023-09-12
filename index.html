@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/5e86550e56.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Employee Dashboard</title>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <h1 class="logo">Dashboard</h1>
+        <ul>
+          <li>
+            <a href="#"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+          </li>
+
+          <li>
+            <a href="#"><i class="fa-solid fa-user"></i> Users</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-file"></i> History</a>
+          </li>
+          <li class="active">
+            <a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+          </li>
+          <li>
+            <a href="#" class="ticket-link"
+              ><i class="fa-solid fa-ticket" style="margin-inline-end: 15px"></i
+              >Tickets <span class="ticket-number">42</span></a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-dollar-sign"></i> Sales</a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-file"></i> Reports
+              <span class="ticket-number" style="margin-right: 15px"
+                >67</span
+              ></a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+          </li>
+          <li class="new-account">
+            <a href="#"><i class="fa-solid fa-plus"></i> New Account</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="main-container">
+        <div class="container">
+          <div class="card">
+            <div class="card-header">
+              <h3>Analytics</h3>
+              <i class="fa-solid fa-ellipsis-v"></i>
+            </div>
+
+            <div class="card-body">
+              <div class="analytics">
+                <div class="analytics-card">
+                  <div class="analytics-text">
+                    <h4>Users</h4>
+                    <p>167,892/350,000</p>
+
+                    <!-- Progress Ring -->
+                    <div class="progress">
+                      <div class="outer">
+                        <div class="inner">
+                          <div id="number" class="number">64%</div>
+                        </div>
+                      </div>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        version="1.1"
+                        width="180px"
+                        height="180px"
+                      >
+                        <defs>
+                          <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                          </linearGradient>
+                        </defs>
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="analytics-card">
+                  <div class="analytics-text">
+                    <h4>Tickets</h4>
+                    <p>45/150</p>
+
+                    <!-- Progress Ring -->
+                    <div class="progress">
+                      <div class="outer">
+                        <div class="inner">
+                          <div id="number" class="number">67%</div>
+                        </div>
+                      </div>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        version="1.1"
+                        width="180px"
+                        height="180px"
+                      >
+                        <defs>
+                          <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                          </linearGradient>
+                        </defs>
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="analytics-card">
+                  <div class="analytics-text">
+                    <h4>Sales</h4>
+                    <p>423/750</p>
+
+                    <!-- Progress Ring -->
+                    <div class="progress">
+                      <div class="outer">
+                        <div class="inner">
+                          <div id="number" class="number">65%</div>
+                        </div>
+                      </div>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        version="1.1"
+                        width="180px"
+                        height="180px"
+                      >
+                        <defs>
+                          <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                          </linearGradient>
+                        </defs>
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="analytics-card">
+                  <div class="analytics-text">
+                    <h4>Reports</h4>
+                    <p>467/15,000</p>
+
+                    <!-- Progress Ring -->
+                    <div class="progress">
+                      <div class="outer">
+                        <div class="inner">
+                          <div id="number" class="number">62%</div>
+                        </div>
+                      </div>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        version="1.1"
+                        width="180px"
+                        height="180px"
+                      >
+                        <defs>
+                          <linearGradient id="GradientColor">
+                            <stop offset="0%" stop-color="#e91e63" />
+                            <stop offset="100%" stop-color="#673ab7" />
+                          </linearGradient>
+                        </defs>
+                        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="users">
+          <div class="user">
+            <div class="image">
+              <!-- Photo from foto sushi -->
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+              />
+            </div>
+            <div class="name">John</div>
+            <div class="last-seen">4 Hours Ago</div>
+          </div>
+
+          <div class="user" id="second-user">
+            <div class="image">
+              <!-- Go to Artur Tumasjan's profile
+Artur Tumasjan -->
+              <img
+                src="https://images.unsplash.com/photo-1571901205848-96622809cf6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                alt=""
+              />
+            </div>
+            <div class="name">Katherine</div>
+            <div class="last-seen">4 Hours Ago</div>
+          </div>
+
+          <div class="user" id="third-user">
+            <div class="image">
+              <!-- Image by Warren -->
+              <img
+                src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2296&q=80"
+                alt=""
+              />
+            </div>
+            <div class="name">David</div>
+            <div class="last-seen">4 Hours Ago</div>
+          </div>
+
+          <div class="user" id="new-user">
+            <div class="new-icon">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="new">New User</div>
+          </div>
+        </div>
+
+        <div class="orders">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Product</th>
+                <th>Date</th>
+                <th>Payment</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
